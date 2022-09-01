@@ -27,10 +27,14 @@ def media_lista_valores(v:list):
     ''' Função que retorna a média entre N valores
     '''
     if v == []:
-        return '0'
-        
-    for a in v:
-        if a != int and a != float:
-            v.pop(a)
-    return np.mean
-    
+        return 0
+
+    lista_nova = []    
+
+    i = 0
+    while i != len(v)-1:
+        if not isinstance(v[i], str):
+            lista_nova.append(v[i])
+        i = i + 1
+    media =np.mean(lista_nova)
+    return float(f'{media:.1f}')
