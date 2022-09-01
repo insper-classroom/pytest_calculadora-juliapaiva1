@@ -18,6 +18,8 @@ def multiplicacao(va: float, vb: float):
 def divisao(va: float, vb: float):
     ''' Função que retorna a divisão entre dois valores
     '''
+    if va == 0:
+        return np.inf
     if vb == 0:
         return np.inf
     else:

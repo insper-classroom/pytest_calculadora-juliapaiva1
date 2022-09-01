@@ -32,6 +32,9 @@ def test_multiplicacao_negativo_negativo():
 def test_divisao_por_zero():
     assert divisao(2, 0) == np.inf
 
+def test_divisao_com_zero():
+    assert divisao(0, 8) == np.inf
+
 def test_divisao_por_positivo():
     assert divisao(5, 5) == 1
 
